@@ -4,7 +4,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 # ضع التوكن الخاص بك هنا
-TOKEN = "8403920484:AAGjYfvbPlbMBAQEOihKx928vN9NxObMTqA"
+import os
+TOKEN = os.getenv("TOKEN")
 
 # أمر /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
